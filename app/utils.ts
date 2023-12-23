@@ -60,6 +60,7 @@ export function useOptionalUser(): User | undefined {
   }
   return data.user;
 }
+export type useOptionalUserType = ReturnType<typeof useOptionalUser>;
 
 export function useUser(): User {
   const maybeUser = useOptionalUser();
